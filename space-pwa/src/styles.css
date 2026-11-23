@@ -1,0 +1,23 @@
+:root { --bg:#0b1020; --card:#151b33; --text:#e8ecff; --muted:#9aa4d1; --accent:#6c8cff; --ok:#3ddc97; --bad:#ff6b6b; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; background:var(--bg); color:var(--text); }
+header { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.5rem; padding:1rem 1.25rem; background:#10162d; border-bottom:1px solid #222a4d; }
+header h1 { margin:0; font-size:1.3rem; }
+.net { font-size:.85rem; color:var(--ok); } .net.off { color:var(--bad); }
+.push { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; padding:.75rem 1.25rem; }
+main { padding:0 1.25rem 1.5rem; max-width:1100px; margin:0 auto; }
+footer { text-align:center; color:var(--muted); font-size:.8rem; padding:1rem; }
+button, .actions a { background:var(--accent); color:#fff; border:0; border-radius:8px; padding:.5rem .9rem; cursor:pointer; font-size:.9rem; text-decoration:none; }
+button.ghost { background:transparent; border:1px solid var(--accent); }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:1rem; }
+.card { background:var(--card); border-radius:12px; overflow:hidden; }
+.card img { width:100%; height:160px; object-fit:cover; display:block; }
+.card .body { padding:.9rem; } .card h3 { margin:.4rem 0; font-size:1.05rem; }
+.actions { display:flex; gap:.5rem; margin-top:.6rem; flex-wrap:wrap; }
+.badge { background:#25305e; color:var(--ok); padding:.15rem .55rem; border-radius:99px; font-size:.75rem; }
+.muted { color:var(--muted); }
+.state { text-align:center; padding:2rem; } .state.error { color:var(--bad); }
+.spinner { width:36px; height:36px; margin:0 auto 1rem; border:4px solid #25305e; border-top-color:var(--accent); border-radius:50%; animation:spin 1s linear infinite; }
+@keyframes spin { to { transform:rotate(360deg); } }
+.detail { background:var(--card); border-radius:12px; padding:1rem; } .detail img { width:100%; max-height:380px; object-fit:cover; border-radius:10px; }
+.back { color:var(--accent); display:inline-block; margin:1rem 0; text-decoration:none; }
